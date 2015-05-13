@@ -9,29 +9,29 @@
 import UIKit
 import MapKit
 
-
+//This View Controller shows the earthquakes after select a city in a radius of 100km, order by distance to
+//the city selected
 class eqSortDistanceViewController: UITableViewController, LocationPickerViewControllerDelegate {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        USGS.sharedInstance().earthquakes = []
-        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "search")
         
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        USGS.sharedInstance().earthquakes = []
     }
     
+    //Action for the Bar button
     func search(){
         let controller = self.storyboard!.instantiateViewControllerWithIdentifier("Picker") as! eqLocationPickerController
         controller.delegate = self
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
+    //When the search is done, calls this method and make the query
     func locationPicker(locationPicker: eqLocationPickerController, didPickLocation mapItem: MKMapItem?) {
         if let mapItem = mapItem {
             let coordinates = mapItem.placemark.coordinate
@@ -53,6 +53,8 @@ class eqSortDistanceViewController: UITableViewController, LocationPickerViewCon
         
         }
     }
+    
+    //MARK: Table View methods
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return USGS.sharedInstance().earthquakes.count

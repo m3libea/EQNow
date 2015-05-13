@@ -21,6 +21,7 @@ class eqMapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Put the social buttons to the right of the navigation item
         var btnFB = UIBarButtonItem(image: UIImage(named: "fb.png"), style: UIBarButtonItemStyle.Plain, target: self, action: "sendFB")
         var btnTW = UIBarButtonItem(image: UIImage(named: "twitter.png"), style: UIBarButtonItemStyle.Plain, target: self, action: "sendTW")
         self.navigationItem.setRightBarButtonItems([btnFB, btnTW], animated: false)
@@ -44,6 +45,7 @@ class eqMapViewController: UIViewController, MKMapViewDelegate {
         return pinView
     }
     
+    //MARK: Social Media methods to send to FB and Twitter
     func sendFB(){
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
             var fbMsg: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)

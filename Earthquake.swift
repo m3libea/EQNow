@@ -14,7 +14,7 @@ class Earthquake {
     var depth: Double
     var coordinates: CLLocationCoordinate2D
     var place: String
-    //Var to make more easy the sort in third tab
+    //Var to make easier to sort the elements in the distance tab
     var distanceTo: CLLocationDistance
     
     init(dictionary: [String : AnyObject]) {
@@ -69,8 +69,7 @@ class Earthquake {
         }else{
             minute = "\(components.minute)"
         }
-        
-        
+                
         return "\(components.hour):\(minute)"
     }
     
@@ -78,13 +77,10 @@ class Earthquake {
     func getColorMag()-> UIColor{
         if(magnitude < 2){
             return UIColor.yellowColor()
-            //return UIColor(red: 0xF9, green: 0xE3, blue: 0x64, alpha: 1.0)
         }else if magnitude < 5{
             return UIColor.orangeColor()
-            //return UIColor(red: 0xF9, green: 0x93, blue: 0x2C, alpha: 1.0)
         }else{
             return UIColor.redColor()
-            //return UIColor(red: 0xF9, green: 0x41, blue: 0x2C, alpha: 1.0)
         }
     }
 }

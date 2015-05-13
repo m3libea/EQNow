@@ -8,6 +8,7 @@
 
 import UIKit
 
+//This View Controller shows the earthqueakes in the world and today, order by magnitude
 class eqSortMagnitudeViewController: UITableViewController {
     
     override func viewDidLoad() {
@@ -20,6 +21,7 @@ class eqSortMagnitudeViewController: UITableViewController {
         loadTable()
     }
     
+    //Method to make the query needed
     func loadTable(){
         USGS.sharedInstance().queryToAPI(["starttime" : USGS.sharedInstance().getDate(), "orderby" : "magnitude"]){ result, error in
             if let error = error {
@@ -35,10 +37,7 @@ class eqSortMagnitudeViewController: UITableViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    //MARK: TableView functions
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return USGS.sharedInstance().earthquakes.count

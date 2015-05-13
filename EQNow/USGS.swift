@@ -57,42 +57,6 @@ class USGS: NSObject {
         
     }
     
-    func last24hoursByPosition(latitude: String, longitude: String, maxradius: String, completionHandler:CompletionHandler) -> NSURLSessionDataTask {
-        let burl = "\(baseURL)&latitude=\(latitude)&longitude=\(longitude)&maxradius=\(maxradius)&starttime=\(getDate())"
-        println(burl)
-        let url = NSURL(string: burl)
-        let request = NSURLRequest(URL: url!)
-        
-        let task = session.dataTaskWithRequest(request){data, response, downloadError in
-            if let error = downloadError {
-                completionHandler(result: nil, error: error)
-            }else{
-                self.parseJSON(data, completionHandler: completionHandler)
-            }
-        }
-        task.resume()
-        return task
-        
-    }
-    
-    func last24hours(completionHandler:CompletionHandler) -> NSURLSessionDataTask {
-        let burl = "\(baseURL)&starttime=\(getDate())"
-        println(burl)
-        let url = NSURL(string: burl)
-        let request = NSURLRequest(URL: url!)
-        
-        let task = session.dataTaskWithRequest(request){data, response, downloadError in
-            if let error = downloadError {
-                completionHandler(result: nil, error: error)
-            }else{
-                self.parseJSON(data, completionHandler: completionHandler)
-            }
-        }
-        task.resume()
-        return task
-        
-    }
-    
     //Parse JSON
     
     func parseJSON(data: NSData, completionHandler: CompletionHandler) {
@@ -116,15 +80,6 @@ class USGS: NSObject {
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components(.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay, fromDate: date )
-        
-        return "\(components.year)-\(components.month)-\(components.day)"
-    }
-    
-    func getDateYesterday()-> String{
-        
-        let calendar = NSCalendar.currentCalendar()
-        let date = calendar.dateByAddingUnit(.CalendarUnitDay, value: -1, toDate: NSDate(), options: nil)
-        let components = calendar.components(.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay, fromDate: date! )
         
         return "\(components.year)-\(components.month)-\(components.day)"
     }

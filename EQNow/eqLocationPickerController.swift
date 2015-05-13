@@ -83,6 +83,7 @@ class eqLocationPickerController: UIViewController, UITableViewDataSource, UITab
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    //MARK: Table View methods
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results.count
     }
