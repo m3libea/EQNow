@@ -113,7 +113,9 @@
                             <constraint firstItem="6rd-Df-pCc" firstAttribute="leading" secondItem="J6J-so-enJ" secondAttribute="leading" id="m9S-di-KBS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6xK-Hd-Pkb"/>
+                    <navigationItem key="navigationItem" id="6xK-Hd-Pkb">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="map" destination="6rd-Df-pCc" id="hLD-nj-a8h"/>
                     </connections>

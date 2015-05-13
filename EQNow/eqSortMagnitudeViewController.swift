@@ -63,6 +63,7 @@ class eqSortMagnitudeViewController: UITableViewController {
         
         controller.center = quake.coordinates
         controller.note = quake.annotation
+        controller.place = quake.place
         self.navigationController!.pushViewController(controller, animated: true)
     }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F496E471B019B5700B9B83F /* eqLocationPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F496E461B019B5700B9B83F /* eqLocationPickerController.swift */; };
+		9F496E4A1B03D20400B9B83F /* fb.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F496E481B03D20400B9B83F /* fb.png */; };
+		9F496E4B1B03D20400B9B83F /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F496E491B03D20400B9B83F /* twitter.png */; };
 		9F4FE5E81AFBF5F300BCACA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FE5E71AFBF5F300BCACA3 /* AppDelegate.swift */; };
 		9F4FE5EF1AFBF5F300BCACA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4FE5ED1AFBF5F300BCACA3 /* Main.storyboard */; };
 		9F4FE5F11AFBF5F400BCACA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4FE5F01AFBF5F400BCACA3 /* Images.xcassets */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		9F496E461B019B5700B9B83F /* eqLocationPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eqLocationPickerController.swift; sourceTree = "<group>"; };
+		9F496E481B03D20400B9B83F /* fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb.png; sourceTree = "<group>"; };
+		9F496E491B03D20400B9B83F /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		9F4FE5E21AFBF5F300BCACA3 /* EQNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EQNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4FE5E61AFBF5F300BCACA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F4FE5E71AFBF5F300BCACA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 		9F65C01C1AFBFC870052CD84 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9F496E481B03D20400B9B83F /* fb.png */,
+				9F496E491B03D20400B9B83F /* twitter.png */,
 				9F65C0251AFC259B0052CD84 /* globe.png */,
 				9F65C0151AFBFC740052CD84 /* clock148.png */,
 				9F65C0371AFEF4070052CD84 /* search.png */,
@@ -265,6 +271,8 @@
 				9F4FE5F41AFBF5F400BCACA3 /* LaunchScreen.xib in Resources */,
 				9F65C0241AFC0A450052CD84 /* magnifier.png in Resources */,
 				9F4FE5F11AFBF5F400BCACA3 /* Images.xcassets in Resources */,
+				9F496E4B1B03D20400B9B83F /* twitter.png in Resources */,
+				9F496E4A1B03D20400B9B83F /* fb.png in Resources */,
 				9F65C0231AFC0A450052CD84 /* refresh.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
